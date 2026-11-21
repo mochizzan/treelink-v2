@@ -887,9 +887,13 @@ body:has(dialog[open]) .backdrop__lens {
     animation: rise 0.6s var(--ease-bounce) 0.5s backwards;
   }
 
+  .sticker:nth-child(3) {
+    animation: rise 0.6s var(--ease-bounce) 0.58s backwards;
+  }
+
   .pill {
     animation:
-      rise 0.6s var(--ease-bounce) 0.58s backwards,
+      rise 0.6s var(--ease-bounce) 0.66s backwards,
       pill-breathe 5s ease-in-out 1.4s infinite;
   }
 
@@ -906,7 +910,7 @@ body:has(dialog[open]) .backdrop__lens {
   }
 
   .footer {
-    animation: rise 0.6s var(--ease-spring) 0.74s backwards;
+    animation: rise 0.6s var(--ease-spring) 0.82s backwards;
   }
 }
 

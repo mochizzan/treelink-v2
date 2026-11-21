@@ -1,5 +1,5 @@
 export type SocialLink = {
-  id: 'discord' | 'tiktok'
+  id: 'discord' | 'tiktok' | 'github'
   name: string
   label: string
   handle: string
@@ -34,6 +34,15 @@ export const socials: SocialLink[] = [
     href: 'https://www.tiktok.com/@moch.izzan',
     description: 'Potongan live dan hal random di TikTok.',
     ariaLabel: 'Buka pilihan tautan TikTok Moch Izzan',
+  },
+  {
+    id: 'github',
+    name: 'GitHub',
+    label: 'github',
+    handle: 'github.com/mochizzan',
+    href: 'https://github.com/mochizzan?tab=repositories',
+    description: 'Repositori dan proyek kode di GitHub.',
+    ariaLabel: 'Buka pilihan tautan GitHub Moch Izzan',
   },
 ]
 
