@@ -1,0 +1,132 @@
+/*
+ * Semantic color roles
+ * --------------------
+ * Each role is a light/dark pair declared with light-dark(). The browser
+ * chooses the pair from `color-scheme`, which follows the OS preference by
+ * default. Force a theme by adding `class="light"` or `class="dark"` to
+ * <html>.
+ *
+ * @theme inline exposes every role as a Tailwind utility, for example:
+ *   bg-background  text-foreground  bg-cta  text-accent-foreground
+ */
+@theme inline {
+  /* Surfaces */
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+
+  /* Text */
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+
+  /* Lines */
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  /* Primary — blue for text and links */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-subtle: var(--primary-subtle);
+  --color-primary-subtle-foreground: var(--primary-subtle-foreground);
+
+  /* Call to action — the brand blue anchor, always paired with ink text */
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-cta-foreground: var(--cta-foreground);
+
+  /* Accent — gold stickers */
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-accent-subtle-foreground: var(--accent-subtle-foreground);
+
+  /* Focus and links */
+  --color-ring: var(--ring);
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+}
+
+:root {
+  color-scheme: light dark;
+
+  /* Surfaces — lilac ground, porcelain cards */
+  --background: light-dark(#dfdbe5, #171220);
+  --surface: light-dark(#f6f3f8, #211a2c);
+  --surface-muted: light-dark(#e9e4ef, #2b2337);
+
+  /* Text */
+  --foreground: light-dark(#241f2c, #f4f0f9);
+  --foreground-muted: light-dark(#4f465c, #bcb2cc);
+
+  /* Lines */
+  --border: light-dark(#c9c1d4, #453c54);
+  --border-strong: light-dark(#a99fb7, #5f5470);
+
+  /* Primary — deep blue for text and links */
+  --primary: light-dark(#1b447f, #8fb8ff);
+  --primary-hover: light-dark(#12305c, #b4cfff);
+  --primary-foreground: light-dark(#ffffff, #171220);
+  --primary-subtle: light-dark(#eef3fb, #172a4a);
+  --primary-subtle-foreground: light-dark(#12305c, #bbd7ff);
+
+  /* Call to action — #418FFF is a fill, never white-on-blue text */
+  --cta: light-dark(#418fff, #6da8ff);
+  --cta-hover: light-dark(#2f82fa, #95c0ff);
+  --cta-foreground: light-dark(#15121c, #171220);
+
+  /* Accent — gold */
+  --accent: light-dark(#afa640, #bfb867);
+  --accent-hover: light-dark(#a79e38, #cfcb8f);
+  --accent-foreground: light-dark(#15121c, #171220);
+  --accent-subtle: light-dark(#f1efd9, #2d2a03);
+  --accent-subtle-foreground: light-dark(#5f5908, #cfcb8f);
+
+  /* Focus and links */
+  --ring: light-dark(#418fff, #6da8ff);
+  --link: light-dark(#1b447f, #9cc0ff);
+  --link-hover: light-dark(#12305c, #c4daff);
+
+  /* Shadows and overlays */
+  --shadow-color: light-dark(rgb(36 31 44 / 0.1), rgb(0 0 0 / 0.5));
+  --overlay: light-dark(rgb(23 18 32 / 0.58), rgb(0 0 0 / 0.68));
+
+  /* Scrollbar */
+  --scrollbar-track: light-dark(#e9e4ef, #211a2c);
+  --scrollbar-thumb: light-dark(#8b8199, #6e6380);
+  --scrollbar-thumb-hover: light-dark(#a79e38, #cfcb8f);
+
+  /*
+   * Decorative dot pattern from the brief. light-dark() only switches colors,
+   * so the two image tiles are mapped by the rules below. The light tile is
+   * kept exactly as supplied.
+   */
+  --dot-pattern-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  --dot-pattern-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23B7A9CC' fill-opacity='0.3' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  --dot-lens-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.65' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  --dot-lens-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23B7A9CC' fill-opacity='0.55' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  --dot-pattern: var(--dot-pattern-light);
+  --dot-lens: var(--dot-lens-light);
+}
+
+/* The pattern tiles follow the same manual theme switch as the colors. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dot-pattern: var(--dot-pattern-dark);
+    --dot-lens: var(--dot-lens-dark);
+  }
+}
+
+/* Manual overrides: put the class on <html>. */
+:root.light {
+  color-scheme: light;
+  --dot-pattern: var(--dot-pattern-light);
+  --dot-lens: var(--dot-lens-light);
+}
+
+:root.dark {
+  color-scheme: dark;
+  --dot-pattern: var(--dot-pattern-dark);
+  --dot-lens: var(--dot-lens-dark);
+}

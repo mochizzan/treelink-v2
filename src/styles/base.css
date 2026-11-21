@@ -1,0 +1,129 @@
+/*
+ * Global element styles.
+ * Component-specific rules live in src/App.css.
+ */
+@theme {
+  --font-sans: 'Nunito', ui-rounded, 'Segoe UI', system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: var(--foreground);
+    background-color: var(--background);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    min-width: 320px;
+    scrollbar-gutter: stable;
+  }
+
+  /* Custom scrollbar: WebKit and Blink. */
+  ::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 4px solid var(--scrollbar-track);
+    border-radius: 999px;
+    background: var(--scrollbar-thumb);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--scrollbar-track);
+  }
+
+  /* Custom scrollbar: Firefox, which ignores the WebKit pseudo-elements. */
+  @supports (-moz-appearance: none) {
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    }
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100svh;
+    background-color: var(--background);
+    overflow-x: hidden;
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--foreground);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  svg {
+    display: block;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

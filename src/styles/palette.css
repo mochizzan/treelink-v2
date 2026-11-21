@@ -1,0 +1,53 @@
+/*
+ * Brand palette
+ * -------------
+ * The three anchors from the brief are preserved exactly:
+ *   gold-500  #AFA640
+ *   gold-600  #A79E38
+ *   blue-500  #418FFF
+ *
+ * Every other step was generated in OKLCH at the same hue
+ * (gold 104.3°, blue 257.9°) so the ramp stays perceptually even.
+ * `@theme static` keeps all steps in the compiled CSS so the semantic
+ * layer can reference them without relying on class detection.
+ */
+@theme static {
+  /* Gold — warm, olive-leaning yellow */
+  --color-gold-50: #f9f9ec;
+  --color-gold-100: #f1efd9;
+  --color-gold-200: #e0ddb4;
+  --color-gold-300: #cfcb8f;
+  --color-gold-400: #bfb867;
+  --color-gold-500: #afa640; /* anchor */
+  --color-gold-600: #a79e38; /* anchor */
+  --color-gold-700: #827a1d;
+  --color-gold-800: #5f5908;
+  --color-gold-900: #3e3900;
+  --color-gold-950: #2d2a03;
+
+  /* Blue — vivid azure */
+  --color-blue-50: #f3f8ff;
+  --color-blue-100: #e1edff;
+  --color-blue-200: #bbd7ff;
+  --color-blue-300: #95c0ff;
+  --color-blue-400: #6da8ff;
+  --color-blue-500: #418fff; /* anchor */
+  --color-blue-600: #2574e2;
+  --color-blue-700: #155cbb;
+  --color-blue-800: #0b4692;
+  --color-blue-900: #03306c;
+  --color-blue-950: #0a2751;
+
+  /* Sand — warm neutral used for surfaces, text and lines */
+  --color-sand-50: #fafaf8;
+  --color-sand-100: #f4f3f0;
+  --color-sand-200: #e7e6e3;
+  --color-sand-300: #d5d4d0;
+  --color-sand-400: #bbbbb6;
+  --color-sand-500: #9f9f99;
+  --color-sand-600: #81807a;
+  --color-sand-700: #64635e;
+  --color-sand-800: #494843;
+  --color-sand-900: #2e2e2a;
+  --color-sand-950: #12120f;
+}

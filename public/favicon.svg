@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#AFA640" stroke="#242320" stroke-width="3" />
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#FAF8F2" stroke-width="2" opacity="0.55" />
+  <text
+    x="32"
+    y="41"
+    text-anchor="middle"
+    font-family="Nunito, Arial, sans-serif"
+    font-size="23"
+    font-weight="800"
+    fill="#242320"
+  >
+    MI
+  </text>
+</svg>

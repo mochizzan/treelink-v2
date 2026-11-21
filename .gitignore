@@ -1,0 +1,218 @@
+# =============================================================================
+# Project dotfiles
+# =============================================================================
+# Shared configuration such as .gitignore and .oxlintrc.json stays tracked.
+# A blanket ".*" rule would silently ignore those too, so generated
+# dot-prefixed artifacts are listed explicitly below.
+
+# =============================================================================
+# Dependencies and build output
+# =============================================================================
+node_modules/
+dist/
+dist-ssr/
+build/
+out/
+.output/
+.vite/
+.vite-inspect/
+.turbo/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+.astro/
+.angular/
+.docusaurus/
+.vercel/
+.netlify/
+.serverless/
+.firebase/
+.sanity/
+.contentlayer/
+.expo/
+.expo-shared/
+.webpack/
+.rollup.cache/
+.esbuild/
+.swc/
+*.tsbuildinfo
+*.local
+
+# =============================================================================
+# Logs, caches, and process files
+# =============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.eslintcache
+.stylelintcache
+.oxlintcache
+.sass-cache/
+.cache/
+.tmp/
+.temp/
+.history/
+.npm/
+.pnpm-store/
+.yarn/
+.nyc_output/
+.node_repl_history
+*.pid
+*.pid.lock
+*.seed
+*.stackdump
+
+# =============================================================================
+# Environment and secrets
+# =============================================================================
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# =============================================================================
+# OS junk
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+.apdisk
+.directory
+.Trash-*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# =============================================================================
+# Editors and IDEs
+# =============================================================================
+.vscode/
+.idea/
+.fleet/
+.zed/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# =============================================================================
+# Generic junk
+# =============================================================================
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+*~
+*.crdownload
+*.part
+*.partial
+*.dmp
+
+# =============================================================================
+# Test, E2E, and smoke artifacts
+# =============================================================================
+coverage/
+*.lcov
+lcov.info
+junit.xml
+test-report.xml
+test-results.xml
+results.xml
+
+# Playwright
+playwright-report/
+blob-report/
+test-results/
+.playwright/
+playwright/.auth/
+playwright/.cache/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+cypress/.cache/
+
+# Generated E2E / smoke output
+e2e-artifacts/
+e2e-results/
+smoke-artifacts/
+smoke-results/
+test-artifacts/
+
+# Traces and reports
+*.trace.zip
+trace.zip
+*.har
+.lighthouseci/
+lighthouse-report.*
+
+# =============================================================================
+# AI agent artifacts
+# =============================================================================
+# Local agent skills, screenshots, reports, and caches
+.taste-skill/
+.playwright-mcp/
+.agent/
+.agents/
+.ai/
+.llm/
+.prompt-cache/
+
+# Agent tool state and session data
+.claude/
+.claude-flow/
+.claude-plugin/
+.codex/
+.cursor/
+.windsurf/
+.continue/
+.opencode/
+.openhands/
+.gemini/
+.qwen/
+.roo/
+.kiro/
+.kilocode/
+.serena/
+.specstory/
+.repomix/
+.sourcegraph/
+.tabnine/
+.void/
+.devin/
+.factory/
+.factory-cache/
+.taskmaster/
+.bmad/
+.swarm/
+.hive/
+.crush/
+.amp/
+.augment/
+.codeium/
+.goose/
+.plandex/
+.trae/
+
+# Local agent notes, transcripts, and caches
+CLAUDE.local.md
+AGENTS.local.md
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v*/
