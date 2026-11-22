@@ -47,37 +47,37 @@ export function ActionDialog({
         <>
           <button
             type="button"
-            className="dialog__close"
+            className="absolute top-4 right-4 grid w-9 h-9 place-items-center border-2 border-solid border-foreground rounded-full bg-surface-muted text-foreground text-base [transition:background-color_0.2s_ease,transform_0.2s_ease] hover:bg-accent active:scale-[0.92]"
             onClick={() => onClose('dismiss')}
             aria-label="Tutup pilihan tautan"
           >
             <Icon name="close" />
           </button>
 
-          <div className="action">
-            <span className="action__icon" aria-hidden="true">
+          <div className="flex flex-col items-center text-center">
+            <span className="grid w-16 h-16 place-items-center border-2 border-solid border-foreground rounded-[18px] bg-accent text-accent-foreground text-[30px] rotate-[-2deg]" aria-hidden="true">
               <Icon name={action.id} />
             </span>
-            <h2 id="action-title" className="action__title">
+            <h2 id="action-title" className="mt-[18px] text-[26px] font-[900] leading-[1.05] tracking-[-0.03em]">
               {action.name}
             </h2>
-            <p className="action__handle">{action.handle}</p>
-            <p id="action-description" className="action__description">
+            <p className="mt-1.5 text-sm font-bold leading-[1.35] text-foreground-muted">{action.handle}</p>
+            <p id="action-description" className="max-w-[32ch] mt-3.5 text-base leading-[1.5]">
               {action.description}
             </p>
 
-            <div className="action__choices">
+            <div className="flex w-full flex-col gap-2.5 mt-6">
               <button
                 type="button"
-                className="action__choice action__copy"
+                className="inline-flex w-full min-h-[52px] items-center justify-center gap-2.5 border-2 border-solid border-foreground rounded-[999px] text-base font-[800] leading-none [transition:background-color_0.2s_ease,transform_0.2s_ease] bg-surface text-foreground hover:bg-surface-muted active:scale-[0.98]"
                 onClick={handleCopy}
               >
-                <Icon name={copied ? 'check' : 'link'} className="action__choice-icon" />
+                <Icon name={copied ? 'check' : 'link'} className="flex-none text-lg" />
                 <span>{copied ? 'Tautan tersalin' : 'Salin tautan'}</span>
               </button>
 
               <a
-                className="action__choice action__open"
+                className="inline-flex w-full min-h-[52px] items-center justify-center gap-2.5 border-2 border-solid border-foreground rounded-[999px] text-base font-[800] leading-none [transition:background-color_0.2s_ease,transform_0.2s_ease] bg-cta text-cta-foreground hover:bg-cta-hover active:scale-[0.98]"
                 href={action.href}
                 target="_blank"
                 rel="noreferrer"
@@ -88,7 +88,7 @@ export function ActionDialog({
                 aria-label={`Buka ${action.name} di tab baru`}
               >
                 <span>Buka di tab baru</span>
-                <Icon name="arrow-up-right" className="action__choice-icon" />
+                <Icon name="arrow-up-right" className="flex-none text-lg" />
               </a>
             </div>
           </div>
