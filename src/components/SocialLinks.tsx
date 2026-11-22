@@ -8,7 +8,7 @@ type SocialLinksProps = {
 
 export function SocialLinks({ links, onAction }: SocialLinksProps) {
   return (
-    <nav className="socials" aria-label="Tautan sosial">
+    <nav className="flex flex-col items-center gap-[18px] mt-8" aria-label="Tautan sosial">
       {links.map((link) => (
         <StickerLink key={link.id} link={link} onAction={onAction} />
       ))}
