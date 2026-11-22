@@ -72,10 +72,10 @@ function App() {
   return (
     <>
       <Backdrop />
-      <div className="page">
+      <div className="relative z-[1] flex flex-col min-h-[100svh] p-9 sm:p-[60px] lg:p-20">
         <FrameRails />
-        <main className="page__main">
-          <div className="hub">
+        <main className="flex flex-1 flex-col">
+          <div className="w-full max-w-[640px] mx-auto text-center">
             <ProfileHero profile={profile} onAbout={() => setAboutOpen(true)} />
             <SocialLinks links={socials} onAction={openAction} />
             <SupportLink support={support} />
