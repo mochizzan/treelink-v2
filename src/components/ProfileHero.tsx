@@ -12,7 +12,7 @@ export function ProfileHero({ profile, onAbout }: ProfileHeroProps) {
       <span className="hero__stem w-[2px] h-9 bg-foreground opacity-[0.72]" aria-hidden="true" />
       <button
         type="button"
-        className="avatar block w-[104px] h-[104px] p-1 border-2 border-solid border-foreground rounded-full bg-surface transition-transform duration-[350ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:translate-y-[-3px] hover:rotate-[1.5deg] hover:scale-[1.03] active:scale-[0.97]"
+        className="avatar block w-[104px] h-[104px] p-1 border-2 border-solid border-foreground rounded-full bg-surface"
         onClick={onAbout}
         aria-label={`Buka kartu profil ${profile.name}`}
         aria-haspopup="dialog"

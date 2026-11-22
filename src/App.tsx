@@ -3,6 +3,7 @@ import './App.css'
 import { AboutDialog } from './components/AboutDialog'
 import { ActionDialog } from './components/ActionDialog'
 import { Backdrop } from './components/Backdrop'
+import { Fab } from './components/Fab'
 import { FrameRails } from './components/FrameRails'
 import { ProfileHero } from './components/ProfileHero'
 import { SiteFooter } from './components/SiteFooter'
@@ -83,6 +84,7 @@ function App() {
         </main>
         <SiteFooter name={profile.name} year={siteYear} />
       </div>
+      <Fab />
       <AboutDialog
         open={aboutOpen}
         onClose={closeAbout}

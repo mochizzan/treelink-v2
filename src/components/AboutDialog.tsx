@@ -43,7 +43,7 @@ export function AboutDialog({
     >
       <button
         type="button"
-        className="absolute top-4 right-4 grid w-9 h-9 place-items-center border-2 border-solid border-foreground rounded-full bg-surface-muted text-foreground text-base [transition:background-color_0.2s_ease,transform_0.2s_ease] hover:bg-accent active:scale-[0.92]"
+        className="dialog-close absolute top-4 right-4 grid w-9 h-9 place-items-center border-2 border-solid border-foreground rounded-full bg-surface-muted text-foreground text-base"
         onClick={() => onClose('dismiss')}
         aria-label="Tutup kartu profil"
       >
@@ -66,7 +66,7 @@ export function AboutDialog({
           {links.map((link) => (
             <a
               key={link.id}
-              className="flex min-h-12 items-center gap-3 px-2.5 py-2 rounded-[14px] [transition:background-color_0.2s_ease] hover:bg-surface-muted"
+              className="about-row flex min-h-12 items-center gap-3 px-2.5 py-2 rounded-[14px] hover:bg-surface-muted"
               href={link.href}
               aria-label={link.ariaLabel}
               aria-haspopup="dialog"
@@ -80,12 +80,12 @@ export function AboutDialog({
                 <span className="text-[15px] font-[800] leading-[1.2]">{link.name}</span>
                 <span className="overflow-hidden text-ellipsis whitespace-nowrap text-sm text-foreground-muted leading-[1.2]">{link.handle}</span>
               </span>
-              <Icon name="arrow-up-right" className="flex-none text-base text-foreground-muted" />
+              <Icon name="arrow-up-right" className="about-row__arrow flex-none text-base text-foreground-muted" />
             </a>
           ))}
         </div>
 
-        <button type="button" className="inline-flex w-full min-h-12 items-center justify-center gap-2 mt-5 border-2 border-solid border-foreground rounded-[999px] bg-accent text-accent-foreground text-base font-[800] [transition:background-color_0.2s_ease,transform_0.2s_ease] hover:bg-accent-hover active:scale-[0.98]" onClick={handleCopy}>
+        <button type="button" className="about-copy inline-flex w-full min-h-12 items-center justify-center gap-2 mt-5 border-2 border-solid border-foreground rounded-[999px] bg-accent text-accent-foreground text-base font-[800]" onClick={handleCopy}>
           <Icon name={copied ? 'check' : 'link'} className="text-lg" />
           <span>{copied ? 'Tautan disalin' : 'Salin tautan profil'}</span>
         </button>

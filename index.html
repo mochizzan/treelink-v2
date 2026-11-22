@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" class="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -8,8 +8,20 @@
       name="description"
       content="Moch Izzan — streamer gabut dan software engineer. Temukan Discord, TikTok, dan halaman Tipmi."
     />
-    <meta name="theme-color" content="#F6F4EC" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#12120F" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#DFDBE5" />
+    <script>
+      // Apply a saved theme before first paint so the CSS-only theme never flashes.
+      try {
+        var saved = localStorage.getItem('lt2-theme')
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.classList.remove('light', 'dark')
+          document.documentElement.classList.add(saved)
+          document
+            .querySelector('meta[name="theme-color"]')
+            ?.setAttribute('content', saved === 'dark' ? '#171220' : '#DFDBE5')
+        }
+      } catch {}
+    </script>
     <meta property="og:type" content="profile" />
     <meta property="og:title" content="Moch Izzan — Streamer Gabut & Software Engineer" />
     <meta

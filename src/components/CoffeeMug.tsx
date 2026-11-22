@@ -3,8 +3,8 @@ type CoffeeMugProps = {
 }
 
 /**
- * The support CTA's mark. The three steam wisps animate on hover only,
- * so the icon is still at rest.
+ * The support CTA's mark. The three steam wisps drift on a slow loop; the
+ * pill owns the shine and sparkle so this stays a quiet, reusable icon.
  */
 export function CoffeeMug({ className }: CoffeeMugProps) {
   return (

@@ -9,6 +9,8 @@ export type IconName =
   | 'check'
   | 'arrow-up-right'
   | 'link'
+  | 'sun'
+  | 'moon'
 
 type IconProps = {
   name: IconName
@@ -79,6 +81,19 @@ export function Icon({ name, className }: IconProps) {
         <svg {...baseProps} {...strokeProps} className={className} viewBox="0 0 24 24">
           <path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11 5" />
           <path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07L13 19" />
+        </svg>
+      )
+    case 'sun':
+      return (
+        <svg {...baseProps} {...strokeProps} className={className} viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" />
+        </svg>
+      )
+    case 'moon':
+      return (
+        <svg {...baseProps} {...strokeProps} className={className} viewBox="0 0 24 24">
+          <path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1Z" />
         </svg>
       )
   }

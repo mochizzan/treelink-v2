@@ -87,22 +87,23 @@ geometry and a tinted fill for the plum ground. `light-dark()` cannot switch
 an image, so `--dot-pattern` and `--dot-lens` are mapped by the
 `prefers-color-scheme` query and the `.light` / `.dark` classes.
 
-## Dark theme
+## Theme
 
-`semantic.css` sets `color-scheme: light dark` on `:root`, so the browser
-follows the operating system preference automatically. To force a theme,
-put the class on `<html>`:
+Light is the default: `index.html` puts `class="light"` on `<html>`. The
+`:root.light` rule in `semantic.css` fixes `color-scheme: light` and maps the
+dot tiles to their light variants, so the page stays light even when the OS
+prefers dark.
+
+To use dark, change the class on `<html>`:
 
 ```html
 <html class="dark">
 ```
 
-```html
-<html class="light">
-```
-
-The switch is handled entirely by CSS. There is no theme state in React and
-no flash of the wrong theme.
+The switch is handled entirely by CSS. There is no React theme state: the
+quick-actions FAB toggles the class on `<html>` and saves the choice under
+`lt2-theme` in `localStorage`. A small inline script in `index.html` restores
+it before first paint, so there is still no flash of the wrong theme.
 
 ## Scrollbar
 

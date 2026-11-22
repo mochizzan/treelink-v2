@@ -47,7 +47,7 @@ export function ActionDialog({
         <>
           <button
             type="button"
-            className="absolute top-4 right-4 grid w-9 h-9 place-items-center border-2 border-solid border-foreground rounded-full bg-surface-muted text-foreground text-base [transition:background-color_0.2s_ease,transform_0.2s_ease] hover:bg-accent active:scale-[0.92]"
+            className="dialog-close absolute top-4 right-4 grid w-9 h-9 place-items-center border-2 border-solid border-foreground rounded-full bg-surface-muted text-foreground text-base"
             onClick={() => onClose('dismiss')}
             aria-label="Tutup pilihan tautan"
           >
@@ -69,7 +69,7 @@ export function ActionDialog({
             <div className="flex w-full flex-col gap-2.5 mt-6">
               <button
                 type="button"
-                className="inline-flex w-full min-h-[52px] items-center justify-center gap-2.5 border-2 border-solid border-foreground rounded-[999px] text-base font-[800] leading-none [transition:background-color_0.2s_ease,transform_0.2s_ease] bg-surface text-foreground hover:bg-surface-muted active:scale-[0.98]"
+                className="dialog-action inline-flex w-full min-h-[52px] items-center justify-center gap-2.5 border-2 border-solid border-foreground rounded-[999px] text-base font-[800] leading-none bg-surface text-foreground hover:bg-surface-muted"
                 onClick={handleCopy}
               >
                 <Icon name={copied ? 'check' : 'link'} className="flex-none text-lg" />
@@ -77,7 +77,7 @@ export function ActionDialog({
               </button>
 
               <a
-                className="inline-flex w-full min-h-[52px] items-center justify-center gap-2.5 border-2 border-solid border-foreground rounded-[999px] text-base font-[800] leading-none [transition:background-color_0.2s_ease,transform_0.2s_ease] bg-cta text-cta-foreground hover:bg-cta-hover active:scale-[0.98]"
+                className="dialog-cta inline-flex w-full min-h-[52px] items-center justify-center gap-2.5 border-2 border-solid border-foreground rounded-[999px] text-base font-[800] leading-none bg-cta text-cta-foreground hover:bg-cta-hover"
                 href={action.href}
                 target="_blank"
                 rel="noreferrer"
