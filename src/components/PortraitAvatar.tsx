@@ -7,7 +7,7 @@ import portraitUrl from '../assets/moch-izzan.jpg'
 export function PortraitAvatar() {
   return (
     <img
-      className="avatar-photo"
+      className="block w-full h-full rounded-full object-cover"
       src={portraitUrl}
       alt=""
       width="560"
