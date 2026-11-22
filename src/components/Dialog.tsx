@@ -82,7 +82,7 @@ export function Dialog({
   return (
     <dialog
       ref={dialogRef}
-      className={behind ? 'dialog dialog--behind' : 'dialog'}
+      className={behind ? 'dialog dialog--behind fixed inset-0 w-[fit-content] h-[fit-content] max-w-none max-h-none m-auto p-0 border-0 bg-transparent text-foreground overflow-visible' : 'dialog fixed inset-0 w-[fit-content] h-[fit-content] max-w-none max-h-none m-auto p-0 border-0 bg-transparent text-foreground overflow-visible'}
       aria-labelledby={labelledBy}
       aria-describedby={describedBy}
       inert={behind || undefined}
@@ -96,7 +96,7 @@ export function Dialog({
         }
       }}
     >
-      <div className="dialog__panel">{children}</div>
+      <div className="dialog__panel relative w-[min(420px,calc(100vw-32px))] max-h-[calc(100svh-32px)] overflow-y-auto p-[28px] border-2 border-solid border-foreground rounded-[28px] bg-surface shadow-[0_28px_64px_-24px_var(--overlay)] [transition:opacity_0.2s_ease,transform_0.3s_cubic-bezier(0.22,_1,_0.36,_1)]">{children}</div>
       {status}
     </dialog>
   )
